@@ -1,0 +1,1 @@
+This is the write up for the Vulnhub box MR-ROBOT: 1 
