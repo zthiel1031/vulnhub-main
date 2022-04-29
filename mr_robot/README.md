@@ -1,10 +1,11 @@
 # This is the write up for the Vulnhub box MR-ROBOT: 1 
 
-Ip Address: 10.38.1.112
+Box Ip Address: 10.38.1.112
 
+Attacking Machine Ip: 10.38.1.110
 ## **Information Gathering**
 ---
-Starting with an Nmap port Scan of we see this output:
+Starting with an Nmap port Scan we see this output:
 
 ![](2022-04-28-20-51-11.png)
 
