@@ -85,3 +85,21 @@ If we change directories and look into the files we see a `note.txt` file.
 If we `cat` the `note.txt` file this is the output:
 
 ![](Images/note_txt.JPG) 
+
+The spelling `cewl` is a tip off on our next step. Also we can add Anakin to our list of potential users to pivot to.
+
+`Cewl` is custom wordlist generator and given what we have seen I think we are supposed to use it on the `/r2d2` webpage to generate a list of passwords to brute force with.
+
+Back on our home `Desktop`
+
+If we run this command we can generate a file for a list of password.
+
+```
+cewl http://10.38.1.114/r2d2 -w passwords.txt
+```
+
+Now that we have a list of passwords we can use this command to brute force our way through logging in using `SSH` with our two users.
+
+```
+hydra -l anakin -P ./passwords.txt 10.38.1.114 -t 4 ssh1
+```
