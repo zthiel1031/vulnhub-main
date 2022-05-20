@@ -9,6 +9,8 @@ Enjoy!
 
 [StarWarsCTF1](https://www.vulnhub.com/entry/star-wars-ctf-1,528/)
 
+[Funbox:Lunchbreaker](https://www.vulnhub.com/entry/funbox-lunchbreaker,700/)
+
 ## Boxes currently in progress
 
 

