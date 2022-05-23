@@ -85,7 +85,7 @@ So now we have `elliot's` password, which is: `ER28-0652`
 ---
 When looking for these flags, the easiest way I can think of is to somehow get into a shell. Knowing the website is run on `.php` we can do a quick google search for `"php reverse shell kali linux location"` we find the location of the reverse shell code at `/usr/share/laudenum/php/php-reverse-shell.php`
 
-we need to nano this code and make soime changes prior to uploading it to wordpress. These are the changes we need to make
+we need to nano this code and make some changes prior to uploading it to wordpress. These are the changes we need to make
 
 ![](Images/2022-04-28-23-29-34.png)
 

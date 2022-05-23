@@ -19,7 +19,7 @@ Nothing too special. Let's look at the source code and make sure nothing is hidd
 
 ![](Images/117_source.JPG)
 
-It looks like we have fouund a user and email address syntax.
+It looks like we have found a user and email address syntax.
 
 Now that we have the user `jane` let's see if we can use this command to brute force her password for ftp.
 
