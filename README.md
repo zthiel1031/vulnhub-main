@@ -11,8 +11,13 @@ Enjoy!
 
 [Funbox: Lunchbreaker](https://www.vulnhub.com/entry/funbox-lunchbreaker,700/)
 
-## Box currently in progress
 [Basic Pentesting:1](https://www.vulnhub.com/entry/basic-pentesting-1,216/)
+
+## Box currently in progress
+
+[Lord of the root 1.0.1](https://www.vulnhub.com/entry/lord-of-the-root-101,129/)
+
+[Aragog](https://www.vulnhub.com/entry/harrypotter-aragog-102,688/)
 
 ## List of boxes to complete
 [Kioptrix: Level 1 (#1)](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)
