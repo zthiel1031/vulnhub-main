@@ -17,7 +17,6 @@ Enjoy!
 
 [Lord of the root 1.0.1](https://www.vulnhub.com/entry/lord-of-the-root-101,129/)
 
-[Aragog](https://www.vulnhub.com/entry/harrypotter-aragog-102,688/)
 
 ## List of boxes to complete
 [Kioptrix: Level 1 (#1)](https://www.vulnhub.com/entry/kioptrix-level-1-1,22/)
@@ -63,8 +62,6 @@ Enjoy!
 [Zico2](https://www.vulnhub.com/entry/zico2-1,210/)
 
 [Wintermute](https://www.vulnhub.com/entry/wintermute-1,239/)
-
-[Lord of the root 1.0.1](https://www.vulnhub.com/entry/lord-of-the-root-101,129/)
 
 [Tr0ll 1](https://www.vulnhub.com/entry/tr0ll-1,100/)
 
